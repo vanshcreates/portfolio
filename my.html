@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh Gupta | Web Developer</title>
+  <style>
+    body {
+      color: azure;
+      background-color: rgb(31, 31, 31);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
+
+    button {
+      color: whitesmoke;
+      background-color: rgb(31, 31, 31);
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-image: linear-gradient(to right, #10a7ff, #e60ae6) 1;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+      position: sticky;
+      top: 0;
+      background-color: rgb(31, 31, 31);
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #10a7ff;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .menu > li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .menu > li:hover {
+      color: aqua;
+    }
+
+    .hero {
+      display: flex;
+      height: 70vh;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 10rem;
+      margin: 0 5vw;
+    }
+
+    .NAME {
+      color: greenyellow;
+    }
+
+    .yellow {
+      color: rgb(255, 255, 94);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    hr {
+      width: 50%;
+      border: none;
+      border-top: 3px solid #ccc;
+      margin: 20px auto;
+    }
+
+    /* About Section */
+    .about h2{
+      font-size: 4rem;
+    }
+    .about p {
+      font-size: 2rem;
+      line-height: 1.8;
+      max-width: 80vw;
+      margin: auto;
+      text-align: center;
+    }
+
+    /* Skills Section */
+    #skills h2{
+      font-size: 4rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .skill {
+      border: 1px solid #555;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #222;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+      border-color: #10a7ff;
+    }
+
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .project {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #555;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      border-color: #e60ae6;
+    }
+
+    .project h3 {
+      color: #10a7ff;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+    }
+
+    .contact button {
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #444;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2 class="logo">Vansh Gupta</h2>
+    <ul class="menu">
+      <li>Home</li>
+      <li>Projects</li>
+      <li>About</li>
+      <li>Skills</li>
+      <li>Contact</li>
+    </ul>
+    <div>
+      <button onclick="sendMessage()">WhatsApp</button>
+      <button onclick="sendQuery()">Send Query</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <p>HI USERS, MY NAME IS <i class="NAME">VANSH</i>. I AM A <i class="yellow">WEB DEVELOPER</i></p>
+  </div>
+
+  <hr>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2 style="text-align:center;">About Me</h2>
+    <p>
+      I'm a passionate web developer focused on building clean, functional, and visually appealing websites.
+      I love exploring new technologies, learning modern frameworks, and creating meaningful digital experiences.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2 style="text-align:center;">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">C++</div>
+      <div class="skill">Firebase</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2 style="text-align:center;">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio showcasing my skills, projects, and contact information. Built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>E-commerce Site</h3>
+        <p>A full-stack e-commerce platform with product filters, cart management, and admin panel using MERN stack.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>A responsive weather app that shows real-time data using OpenWeather API.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's connect! Reach me through WhatsApp or send a quick query.</p>
+    <button onclick="sendMessage()">Message on WhatsApp</button>
+    <button onclick="sendQuery()">Send Query</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Vansh Gupta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const phone = "918699140994"; // Add country code, no '+' sign
+      const text = "Hey! This is a test message.";
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    }
+
+    function sendQuery() {
+      const email = "mailto:vanshgupta.dev@gmail.com?subject=Website Query&body=Hello Vansh, I’d like to connect with you.";
+      window.location.href = email;
+    }
+  </script>
+</body>
+</html>
